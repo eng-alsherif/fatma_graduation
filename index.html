@@ -1,633 +1,754 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fatma Graduation 2026</title>
 
-  <title>Fatma Graduation 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+:root {
+  --burgundy: #650f20;
+  --cream: #f8f3ed;
+}
 
-    :root {
-      --burgundy: #650f20;
-      --cream: #f8f3ed;
-    }
+html {
+  min-height: 100%;
+}
 
-    html {
-      min-height: 100%;
-    }
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: 'Amiri', serif;
+  background: var(--cream);
+  overflow-x: hidden;
+}
 
-    body {
-      min-height: 100vh;
-      min-height: 100dvh;
-      font-family: 'Amiri', serif;
-      background: var(--cream);
-      overflow-x: hidden;
-    }
+/* الصفحة الأولى */
 
-    /* الصفحة الأولى: الظرف وخلفية الستارة */
-    .landing-page {
-      position: fixed;
-      inset: 0;
-      z-index: 5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-image: url("photo_2026-10-19_16-12-32.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 1;
-      visibility: visible;
-      transition: opacity 1s ease, visibility 1s ease;
-      padding: 20px;
-    }
+.landing-page {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("photo_2026-10-19_16-12-32.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 1s ease;
+  padding: 20px;
+}
 
-    .landing-page.hide {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
+.landing-page.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 
-    .landing-title {
-      position: absolute;
-      top: clamp(8%, 12vh, 16%);
-      left: 0;
-      right: 0;
-      text-align: center;
-      direction: ltr;
-      color: var(--burgundy);
-      font-family: 'Great Vibes', cursive;
-      font-size: clamp(36px, 6vw, 65px);
-      font-weight: 400;
-      opacity: 0;
-      animation: fadeIn 1s ease 1s forwards;
-    }
+.landing-title {
+  position: absolute;
+  top: clamp(8%, 12vh, 16%);
+  left: 0;
+  right: 0;
+  text-align: center;
+  direction: ltr;
+  color: var(--burgundy);
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(36px, 6vw, 65px);
+  font-weight: 400;
+  opacity: 0;
+  animation: fadeIn 1s ease 1s forwards;
+}
 
-    .envelope {
-      display: block;
-      position: relative;
-      width: min(85vw, 480px);
-      height: auto;
-      max-height: 60vh;
-      max-height: 60dvh;
-      object-fit: contain;
-      cursor: pointer;
-      -webkit-tap-highlight-color: transparent;
-      user-select: none;
-      opacity: 0;
-      transform: translateY(25px) scale(.94);
-      animation: envelopeIn 1.4s ease .5s forwards;
-    }
+.envelope {
+  display: block;
+  position: relative;
+  width: min(85vw, 480px);
+  height: auto;
+  max-height: 60vh;
+  max-height: 60dvh;
+  object-fit: contain;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  opacity: 0;
+  transform: translateY(25px) scale(.94);
+  animation: envelopeIn 1.4s ease .5s forwards;
+}
 
-    .landing-hint {
-      position: absolute;
-      bottom: clamp(4%, 6vh, 8%);
-      left: 0;
-      right: 0;
-      text-align: center;
-      color: #795e5d;
-      font-size: clamp(16px, 3.5vw, 22px);
-      opacity: 0;
-      animation: fadeIn .8s ease 2s forwards;
-    }
+.landing-hint {
+  position: absolute;
+  bottom: clamp(4%, 6vh, 8%);
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #795e5d;
+  font-size: clamp(16px, 3.5vw, 22px);
+  opacity: 0;
+  animation: fadeIn .8s ease 2s forwards;
+}
 
-    @keyframes envelopeIn {
-      from {
-        opacity: 0;
-        transform: translateY(25px) scale(.94);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
+@keyframes envelopeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
-    /* صفحة تفاصيل التخرج */
-    .details-page {
-      position: fixed;
-      inset: 0;
-      z-index: 10;
-      width: 100%;
-      height: 100vh;
-      height: 100dvh;
-      overflow-y: auto;
-      overflow-x: hidden;
-      overscroll-behavior: contain;
-      padding: 20px 15px 40px;
-      background:
-        linear-gradient(
-          rgba(255, 247, 245, .18),
-          rgba(250, 233, 231, .18)
-        ),
-        url("photo_2026-10-19_16-12-32.jpg")
-        center / cover no-repeat;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(20px);
-      transition:
-        opacity 1s ease,
-        transform 1s ease,
-        visibility 1s ease;
-    }
+/* الصفحة الثانية */
 
-    .details-page.show {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
+.details-page {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  padding: 25px 15px 40px;
 
-    /* عنوان التخرج الرئيسي */
-    .graduation-heading {
-      width: 100%;
-      text-align: center;
-      direction: ltr;
-      font-family: 'Great Vibes', cursive;
-      font-size: clamp(38px, 6vw, 62px);
-      font-weight: 400;
-      color: #650f20;
-      line-height: 1.2;
-      margin: 10px auto 25px;
-      position: relative;
-      z-index: 5;
-      opacity: 0;
-    }
+  background:
+    linear-gradient(
+      rgba(255, 247, 245, .18),
+      rgba(250, 233, 231, .18)
+    ),
+    url("photo_2026-10-19_16-12-32.jpg")
+    center / cover no-repeat;
 
-    .details-page.show .graduation-heading {
-      animation: fadeIn 1.2s ease 0.2s forwards;
-    }
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
 
-    /* الكرت في وسط الصفحة */
-    .graduation-layout {
-      position: relative;
-      width: min(92vw, 440px);
-      margin: clamp(100px, 15vh, 140px) auto 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  transition:
+    opacity 1s ease,
+    transform 1s ease,
+    visibility 1s ease;
+}
 
-    /* صورة البيبي */
-    .baby-photo {
-      position: absolute;
-      top: clamp(-135px, -28vw, -110px);
-      left: 2%;
-      width: clamp(130px, 32vw, 185px);
-      height: auto;
-      aspect-ratio: 190 / 250;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-      overflow: visible;
-      opacity: 0;
-      transform: translateY(25px);
-      z-index: 4;
-      pointer-events: none;
-    }
+.details-page.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
-    .baby-photo img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center bottom;
-      background: transparent;
-      filter: drop-shadow(
-        3px 4px 5px rgba(0, 0, 0, .15)
-      );
-    }
+/* صورة فاطمة الرئيسية */
 
-    /* ظهور البيبي على الكمبيوتر */
-    .details-page.show .baby-photo {
-      animation: babyAppear 1.2s ease .35s forwards;
-    }
+.portrait-screen {
+  width: 100%;
+  min-height: calc(100dvh - 65px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 10px 35px;
+}
 
-    @keyframes babyAppear {
-      0% {
-        opacity: 0;
-        transform: translateY(25px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.portrait-frame {
+  position: relative;
+  width: clamp(250px, 45vw, 380px);
+  margin: 0 auto 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(35px) scale(.95);
+}
 
-    /* تعديل مكان البيبي في الموبايل فقط */
-    @media (max-width: 600px) {
-      .graduation-layout {
-        position: relative;
-        isolation: isolate;
-      }
+.portrait-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
 
-      .baby-photo {
-        top: -500px;
-        left: auto;
-        right: 0;
-        width: clamp(90px, 30vw, 150px);
-        z-index: 4;
-        transform: translateY(0);
-      }
+.details-page.show .portrait-frame {
+  animation: frameAppear 1.8s ease .4s forwards;
+}
 
-      .details-page.show .baby-photo {
-        animation: babyAppearMobile 1.2s ease .35s forwards;
-      }
-    }
+@keyframes frameAppear {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 
-    /* حركة البيبي في الموبايل لا تغيّر مكانها */
-    @keyframes babyAppearMobile {
-      0% {
-        opacity: 0;
-        transform: translateY(0);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+/* اسم فاطمة */
 
-    /* الكرت المزخرف */
-    .graduation-card {
-      position: relative;
-      z-index: 5;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0;
-      background: transparent !important;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      opacity: 0;
-      transform: translateY(45px) scale(.97);
-    }
+.portrait-text {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin-top: 0;
+  opacity: 0;
+  transform: translateY(15px);
+}
 
-    .graduation-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 0;
-      padding: 0;
-      background: transparent !important;
-      border: none;
-      border-radius: 0;
-      filter: drop-shadow(
-        12px 8px 7px rgba(0, 0, 0, .42)
-      );
-    }
+.details-page.show .portrait-text {
+  animation: textAppear 1.5s ease 1.5s forwards;
+}
 
-    /* الكرت يبدأ بالظهور في نفس توقيت ظهور البيبي */
-    .details-page.show .graduation-card {
-      animation:
-        cardAppear 1.4s cubic-bezier(.2, .75, .25, 1)
-        .35s forwards;
-    }
+.portrait-name-ar {
+  font-family: 'Amiri', serif;
+  font-size: clamp(30px, 6vw, 42px);
+  color: #650f20;
+  line-height: 1.5;
+}
 
-    @keyframes cardAppear {
-      0% {
-        opacity: 0;
-        transform: translateY(45px) scale(.97);
-      }
-      70% {
-        opacity: 1;
-        transform: translateY(-3px) scale(1);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
+.portrait-name-en {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(27px, 5vw, 38px);
+  color: #8a6264;
+  direction: ltr;
+  margin-bottom: 10px;
+}
 
-    /* تفاصيل الحفل */
-    .event-info {
-      width: min(92vw, 540px);
-      margin: clamp(35px, 6vh, 55px) auto 25px;
-      padding: 15px 5px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      text-align: center;
-      direction: rtl;
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      opacity: 0;
-      transform: translateY(25px);
-    }
+.portrait-quote {
+  font-family: 'Amiri', serif;
+  font-size: clamp(18px, 4vw, 24px);
+  color: #795e5d;
+  line-height: 1.8;
+  margin: 8px auto;
+}
 
-    .details-page.show .event-info {
-      animation: eventAppear 1s ease 2.8s forwards;
-    }
+.portrait-year {
+  font-family: Georgia, serif;
+  color: #8a6264;
+  font-size: clamp(14px, 3vw, 18px);
+  letter-spacing: 3px;
+  direction: ltr;
+  margin-top: 12px;
+}
 
-    .info-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      min-width: 0;
-    }
+@keyframes textAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .info-icon {
-      color: #b18a43;
-      font-size: clamp(20px, 3.5vw, 26px);
-    }
+/* تفاصيل الحفل */
 
-    .info-label {
-      color: #8a6264;
-      font-size: clamp(13px, 2.8vw, 16px);
-    }
+.event-info {
+  width: min(92vw, 540px);
+  margin: 45px auto 25px;
+  padding: 15px 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  text-align: center;
+  direction: rtl;
+  opacity: 0;
+  transform: translateY(25px);
+}
 
-    .info-item strong {
-      color: #650f20;
-      font-family: 'Amiri', serif;
-      font-size: clamp(14px, 3.2vw, 22px);
-      line-height: 1.5;
-      overflow-wrap: anywhere;
-    }
+.details-page.show .event-info {
+  animation: eventAppear 1s ease 3.2s forwards;
+}
 
-    @keyframes eventAppear {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
 
-    /* العداد التنازلي */
-    .countdown-section {
-      width: min(92vw, 540px);
-      margin: 30px auto 40px;
-      padding: 10px 5px;
-      text-align: center;
-      color: #650f20;
-      opacity: 0;
-      transform: translateY(20px);
-    }
+.info-icon {
+  color: #b18a43;
+  font-size: clamp(20px, 3.5vw, 26px);
+}
 
-    .details-page.show .countdown-section {
-      animation: eventAppear 1s ease 3.8s forwards;
-    }
+.info-label {
+  color: #8a6264;
+  font-size: clamp(13px, 2.8vw, 16px);
+}
 
-    .countdown-title {
-      font-family: 'Amiri', serif;
-      font-size: clamp(18px, 4vw, 26px);
-      color: #650f20;
-      margin-bottom: 18px;
-    }
+.info-item strong {
+  color: #650f20;
+  font-family: 'Amiri', serif;
+  font-size: clamp(14px, 3.2vw, 22px);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
 
-    .countdown {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      direction: ltr;
-    }
+/* نص الدعوة */
 
-    .countdown-unit {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-    }
+.invitation-message {
+  width: min(92%, 650px);
+  margin: 45px auto 35px;
+  padding: 25px 20px;
+  text-align: center;
+  color: #795e5d;
+  font-family: 'Amiri', serif;
+  line-height: 2;
+  opacity: 0;
+  transform: translateY(25px);
+}
 
-    .countdown-number {
-      font-family: Georgia, serif;
-      font-size: clamp(22px, 5.5vw, 38px);
-      font-weight: bold;
-      color: #650f20;
-      font-variant-numeric: tabular-nums;
-    }
+.details-page.show .invitation-message {
+  animation: eventAppear 1.2s ease 3.5s forwards;
+}
 
-    .countdown-label {
-      font-family: 'Amiri', serif;
-      font-size: clamp(12px, 2.5vw, 16px);
-      color: #8a6264;
-    }
+.invitation-verse {
+  color: #650f20;
+  font-size: clamp(19px, 4.5vw, 25px);
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 18px;
+}
 
-    /* موقع حفل التخرج */
-    .location-section {
-      position: relative;
-      width: min(92vw, 540px);
-      text-align: center;
-      margin: 30px auto 40px;
-      color: #650f20;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      opacity: 0;
-      transform: translateY(20px);
-    }
+.invitation-intro {
+  font-size: clamp(19px, 4vw, 24px);
+  margin-bottom: 18px;
+}
 
-    .details-page.show .location-section {
-      animation: eventAppear 1s ease 4.2s forwards;
-    }
+.invitation-text {
+  font-size: clamp(18px, 3.8vw, 22px);
+  line-height: 2;
+  margin-bottom: 18px;
+}
 
-    /* صورة البيبي بجانب الموقع */
-    .baby-location-photo {
-      position: absolute;
-      left: 10%;
-      top: -15px;
-      width: clamp(90px, 22vw, 130px);
-      height: auto;
-      object-fit: contain;
-      pointer-events: none;
-      z-index: 1;
-      -webkit-mask-image: linear-gradient(
-        to bottom,
-        #000 65%,
-        rgba(0, 0, 0, .75) 82%,
-        transparent 100%
-      );
-      mask-image: linear-gradient(
-        to bottom,
-        #000 65%,
-        rgba(0, 0, 0, .75) 82%,
-        transparent 100%
-      );
-    }
+.invitation-name {
+  color: #650f20;
+  font-size: clamp(21px, 4.5vw, 27px);
+  font-weight: bold;
+  margin: 8px 0;
+}
 
-    .location-link {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: inherit;
-      text-decoration: none;
-      cursor: pointer;
-      -webkit-tap-highlight-color: transparent;
-    }
+.invitation-note {
+  font-size: clamp(16px, 3.5vw, 19px);
+  line-height: 1.9;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(101, 15, 32, .2);
+}
 
-    .location-link:active {
-      opacity: 0.75;
-    }
+/* عنوان مشروع التخرج */
 
-    .building-icon {
-      display: block;
-      width: clamp(110px, 28vw, 150px);
-      height: auto;
-      margin: 0 auto;
-      filter: drop-shadow(
-        2px 3px 3px rgba(0, 0, 0, .12)
-      );
-    }
+.graduation-heading {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 12px;
+  opacity: 0;
+  transform: translateY(15px);
+}
 
-    .location-section p {
-      margin-top: 10px;
-      font-family: 'Amiri', serif;
-      font-size: clamp(17px, 3.8vw, 22px);
-      color: #795e5d;
-    }
+.details-page.show .graduation-heading {
+  animation: textAppear 1.3s ease .2s forwards;
+}
 
-    /* تقليل الحركة عند الحاجة */
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        animation-duration: .01ms !important;
-        animation-delay: 0s !important;
-        transition-duration: .01ms !important;
-      }
-    }
-  </style>
+.graduation-heading .heading-main {
+  display: block;
+  color: #650f20;
+  font-family: 'Aref Ruqaa', 'Amiri', serif;
+  font-size: clamp(52px, 10vw, 78px);
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+  text-shadow: 0 1px 1px rgba(101, 15, 32, .08);
+}
+
+/* العد التنازلي */
+
+.countdown-section {
+  width: min(92vw, 540px);
+  margin: 30px auto 40px;
+  padding: 10px 5px;
+  text-align: center;
+  color: #650f20;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.details-page.show .countdown-section {
+  animation: eventAppear 1s ease 3.8s forwards;
+}
+
+.countdown-title {
+  font-family: 'Amiri', serif;
+  font-size: clamp(18px, 4vw, 26px);
+  color: #650f20;
+  margin-bottom: 18px;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  direction: ltr;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.countdown-number {
+  font-family: Georgia, serif;
+  font-size: clamp(22px, 5.5vw, 38px);
+  font-weight: bold;
+  color: #650f20;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  font-family: 'Amiri', serif;
+  font-size: clamp(12px, 2.5vw, 16px);
+  color: #8a6264;
+}
+
+/* موقع الحفل وصورة البنت */
+
+.location-section {
+  position: relative;
+  width: min(92vw, 540px);
+  text-align: center;
+  margin: 30px auto 40px;
+  color: #650f20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.details-page.show .location-section {
+  animation: eventAppear 1s ease 4.2s forwards;
+}
+
+.location-link {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.location-link:active {
+  opacity: .75;
+}
+
+/* ترتيب الصورة والمبنى في صف واحد */
+
+.location-visual-row {
+  display: flex;
+  flex-direction: row;
+  direction: rtl;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0 auto 8px;
+}
+
+/* صورة البنت: على اليسار */
+
+.location-girl-image {
+  display: block;
+  width: clamp(105px, 27vw, 155px);
+  height: clamp(125px, 32vw, 190px);
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(2px 3px 4px rgba(0, 0, 0, .10));
+}
+
+/* مبنى الجامعة: على اليمين */
+
+.building-icon {
+  display: block;
+  width: clamp(115px, 30vw, 175px);
+  height: auto;
+  margin: 0;
+  flex: 0 0 auto;
+  filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, .12));
+}
+
+.location-section p {
+  margin-top: 10px;
+  font-family: 'Amiri', serif;
+  font-size: clamp(17px, 3.8vw, 22px);
+  color: #795e5d;
+}
+
+@keyframes eventAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تنسيق الموبايل */
+
+@media (max-width: 600px) {
+  .location-visual-row {
+    gap: 7px;
+  }
+
+  .location-girl-image {
+    width: clamp(100px, 31vw, 135px);
+    height: clamp(125px, 38vw, 160px);
+  }
+
+  .building-icon {
+    width: clamp(110px, 34vw, 145px);
+  }
+
+  .details-page {
+    padding: 20px 12px 35px;
+  }
+
+  .portrait-screen {
+    padding: 25px 10px 30px;
+  }
+
+  .portrait-frame {
+    width: clamp(210px, 65vw, 290px);
+    margin-top: 5px;
+  }
+
+  .graduation-heading .heading-main {
+    font-size: clamp(52px, 13vw, 68px);
+  }
+
+  .event-info {
+    gap: 5px;
+  }
+
+  .invitation-message {
+    width: 95%;
+    padding: 20px 12px;
+    margin: 35px auto 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-delay: 0s !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- الصفحة الأولى: الظرف -->
-  <section class="landing-page" id="landingPage">
+<!-- الصفحة الأولى: الظرف -->
 
-    <h1 class="landing-title">
-      Fatma Graduation
-    </h1>
+<section class="landing-page" id="landingPage">
 
-    <img
-      class="envelope"
-      id="envelope"
-      src="Elegant_Burgundy_Graduation_Invitation-removebg-preview.png"
-      alt="ظرف دعوة التخرج"
-      role="button"
-      tabindex="0"
-      aria-label="اضغطي لفتح الدعوة"
-    >
+  <h1 class="landing-title">
+    Fatma Graduation
+  </h1>
 
-    <p class="landing-hint">
-      اضغط على الظرف لفتح الدعوة
+  <img
+    class="envelope"
+    id="envelope"
+    src="Elegant_Burgundy_Graduation_Invitation-removebg-preview.png"
+    alt="ظرف دعوة التخرج"
+    role="button"
+    tabindex="0"
+    aria-label="اضغطي لفتح الدعوة"
+  >
+
+  <p class="landing-hint">
+    اضغط على الظرف لفتح الدعوة
+  </p>
+
+</section>
+
+<!-- الصفحة الثانية -->
+
+<main class="details-page" id="detailsPage" aria-hidden="true">
+
+  <section class="portrait-screen">
+
+    <div class="portrait-frame">
+      <img
+        class="portrait-image"
+        src="Ornate_Oval_Graduation_Portrait-removebg-preview.png"
+        alt="المهندسة فاطمة"
+      >
+    </div>
+
+    <div class="portrait-text">
+
+      <h2 class="portrait-name-ar">
+        المهندسة فاطمة
+      </h2>
+
+      <p class="portrait-name-en">
+        Eng .  Fatma
+      </p>
+
+      <p class="portrait-quote">
+        بفضل الله اكتملت الرحلة، وبدأت حكاية نجاح جديدة
+      </p>
+
+      <p class="portrait-year">
+        GRADUATE OF 2026
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- نص الدعوة -->
+
+  <section class="invitation-message">
+
+    <p class="invitation-verse">
+      ﴿ وَآخِرُ دَعْوَاهُمْ أَنِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴾
+    </p>
+
+    <p class="invitation-intro">
+      طويتُ المساعي بقلبٍ طموح فعانقتُ حلماً،
+      اللهم ليس بجهدي وإنما بتوفيقك وفضلك عليّ.
+    </p>
+
+    <p class="invitation-text">
+      ولأن الأفراح لا تتم إلا بحضور من نحب،
+      يسعدني ويسرني دعوتكم لحضور مناقشة
+    </p>
+
+    <div class="graduation-heading">
+      <span class="heading-main">
+        مشروع تخرجي
+      </span>
+    </div>
+
+    <p class="invitation-name">
+      م. فاطمة عزالدين أبوراس
+    </p>
+
+    <p class="invitation-text">
+      من قسم هندسة النفط - كلية الهندسة -
+      جامعة طرابلس.
+    </p>
+
+    <p class="invitation-note">
+      <strong>ملاحظة:</strong>
+      نظراً لالتزامنا بعدد محدد من المقاعد من طرف الجامعة،
+      فإن الدعوة خاصة وشخصية.
     </p>
 
   </section>
 
-  <!-- صفحة تفاصيل التخرج -->
-  <main
-    class="details-page"
-    id="detailsPage"
-    aria-hidden="true"
-  >
+  <!-- تفاصيل الحفل -->
 
-    <h1 class="graduation-heading">Fatma Graduation</h1>
+  <section class="event-info" aria-label="تفاصيل الحفل">
 
-    <div class="graduation-layout">
+    <div class="info-item">
+      <span class="info-icon">▦</span>
+      <span class="info-label">التاريخ</span>
+      <strong>14 / 11 / 2026</strong>
+    </div>
 
-      <!-- صورة البيبي -->
-      <div class="baby-photo">
-        <img
-          src="Vintage_Kin2222222.png"
-          alt="صورة البيبي"
-        >
+    <div class="info-item">
+      <span class="info-icon">♡</span>
+      <span class="info-label">الوقت</span>
+      <strong>1:00 مساءً</strong>
+    </div>
+
+    <div class="info-item">
+      <span class="info-icon">♧</span>
+      <span class="info-label">المكان</span>
+      <strong>كلية الهندسة</strong>
+    </div>
+
+  </section>
+
+  <!-- العد التنازلي -->
+
+  <section class="countdown-section">
+
+    <h2 class="countdown-title">
+      العد التنازلي لموعد الحفل
+    </h2>
+
+    <div class="countdown">
+
+      <div class="countdown-unit">
+        <span class="countdown-number" id="days">00</span>
+        <span class="countdown-label">يوم</span>
       </div>
 
-      <!-- الكرت المزخرف -->
-      <div class="graduation-card">
-        <img
-          src="Elegant_Burgundy_Floral_Graduation_Card-removebg-preview (1).png"
-          alt="كرت التخرج المزخرف"
-        >
+      <div class="countdown-unit">
+        <span class="countdown-number" id="hours">00</span>
+        <span class="countdown-label">ساعة</span>
+      </div>
+
+      <div class="countdown-unit">
+        <span class="countdown-number" id="minutes">00</span>
+        <span class="countdown-label">دقيقة</span>
+      </div>
+
+      <div class="countdown-unit">
+        <span class="countdown-number" id="seconds">00</span>
+        <span class="countdown-label">ثانية</span>
       </div>
 
     </div>
 
-    <!-- تفاصيل حفل التخرج -->
-    <section class="event-info" aria-label="تفاصيل الحفل">
+  </section>
 
-      <div class="info-item">
-        <span class="info-icon">▦</span>
-        <span class="info-label">التاريخ</span>
-        <strong>11 / 11 / 2026</strong>
-      </div>
+  <!-- موقع الحفل -->
 
-      <div class="info-item">
-        <span class="info-icon">♡</span>
-        <span class="info-label">الوقت</span>
-        <strong>1:00 مساءً</strong>
-      </div>
+  <div class="location-section">
 
-      <div class="info-item">
-        <span class="info-icon">♧</span>
-        <span class="info-label">المكان</span>
-        <strong>كلية الهندسة</strong>
-      </div>
+    <a
+      class="location-link"
+      href="https://www.google.com/maps/search/?api=1&query=Department%20of%20Petroleum%20Engineering%2C%20University%20of%20Tripoli%2C%20Libya&query_place_id=ChIJ16HciAqTqBMRV7JAI90_ASo"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="افتح موقع قسم هندسة النفط بجامعة طرابلس على خرائط Google"
+    >
 
-    </section>
+      <div class="location-visual-row">
 
-    <!-- العداد التنازلي -->
-    <section class="countdown-section">
-      <h2 class="countdown-title">العد التنازلي لموعد الحفل</h2>
-
-      <div class="countdown">
-
-        <div class="countdown-unit">
-          <span class="countdown-number" id="days">00</span>
-          <span class="countdown-label">يوم</span>
-        </div>
-
-        <div class="countdown-unit">
-          <span class="countdown-number" id="hours">00</span>
-          <span class="countdown-label">ساعة</span>
-        </div>
-
-        <div class="countdown-unit">
-          <span class="countdown-number" id="minutes">00</span>
-          <span class="countdown-label">دقيقة</span>
-        </div>
-
-        <div class="countdown-unit">
-          <span class="countdown-number" id="seconds">00</span>
-          <span class="countdown-label">ثانية</span>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- موقع حفل التخرج -->
-    <div class="location-section">
-
-      <img
-        class="baby-location-photo"
-        src="fatoENG.png"
-        alt="صورة فاطمة وهي طفلة بلباس مهندسة نفط"
-      >
-
-      <a
-        class="location-link"
-        href="https://www.google.com/maps/search/?api=1&query=كلية+الهندسة+جامعة+طرابلس"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="افتح موقع كلية الهندسة جامعة طرابلس على خرائط Google"
-      >
+        <!-- المبنى على اليمين -->
 
         <svg
           class="building-icon"
@@ -641,6 +762,7 @@
           role="img"
           aria-label="مبنى الكلية"
         >
+
           <path d="M68 27 L90 7 L112 27 L112 35 L68 35 Z"/>
           <path d="M62 35 H118 V43 H62 Z"/>
           <path d="M55 43 H125 V105 H55 Z"/>
@@ -661,79 +783,165 @@
           <path d="M10 106 H170 L164 113 H16 Z"/>
           <path d="M65 47 H115"/>
           <circle cx="90" cy="53" r="3"/>
+
         </svg>
 
-        <p>اضغط هنا لرؤية الموقع</p>
+        <!-- صورة البنت على اليسار -->
 
-      </a>
+        <img
+          class="location-girl-image"
+          src="Smiling_Young_Petroleum_Engineer_with_Blueprints-removebg-preview.png"
+          alt="صورة الخريجة"
+        >
 
-    </div>
+      </div>
 
-  </main>
+      <p>قسم هندسة النفط - جامعة طرابلس</p>
+      <p>اضغط هنا لرؤية الموقع</p>
 
-  <script>
-    const landingPage = document.getElementById("landingPage");
-    const detailsPage = document.getElementById("detailsPage");
-    const envelope = document.getElementById("envelope");
+    </a>
 
-    let isOpening = false;
+  </div>
 
-    function openDetails() {
-      if (isOpening) return;
-      isOpening = true;
+</main>
 
-      landingPage.classList.add("hide");
+<!-- JavaScript -->
 
-      window.setTimeout(function() {
-        detailsPage.classList.add("show");
-        detailsPage.setAttribute("aria-hidden", "false");
-        detailsPage.scrollTop = 0;
-      }, 450);
+<script>
+
+const landingPage =
+  document.getElementById("landingPage");
+
+const detailsPage =
+  document.getElementById("detailsPage");
+
+const envelope =
+  document.getElementById("envelope");
+
+let isOpening = false;
+
+/* فتح الظرف */
+
+function openDetails() {
+
+  if (isOpening) return;
+
+  isOpening = true;
+
+  landingPage.classList.add("hide");
+
+  window.setTimeout(function() {
+
+    detailsPage.classList.add("show");
+
+    detailsPage.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
+    detailsPage.scrollTop = 0;
+
+  }, 450);
+
+}
+
+/* الضغط على الظرف */
+
+envelope.addEventListener(
+  "click",
+  openDetails
+);
+
+envelope.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (
+      event.key === "Enter" ||
+      event.key === " "
+    ) {
+
+      event.preventDefault();
+
+      openDetails();
+
     }
 
-    envelope.addEventListener("click", openDetails);
+  }
+);
 
-    envelope.addEventListener("keydown", function(event) {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        openDetails();
-      }
-    });
+/* العد التنازلي إلى 14 نوفمبر 2026 الساعة 1 */
 
-    /* العد التنازلي إلى 11 نوفمبر 2026 */
-    const graduationDate = new Date(2026, 10, 11, 13, 0, 0).getTime();
+const graduationDate =
+  new Date(2026, 10, 14, 13, 0, 0).getTime();
 
-    function updateCountdown() {
-      const now = Date.now();
-      const difference = graduationDate - now;
+function updateCountdown() {
 
-      const daysElement = document.getElementById("days");
-      const hoursElement = document.getElementById("hours");
-      const minutesElement = document.getElementById("minutes");
-      const secondsElement = document.getElementById("seconds");
+  const now = Date.now();
 
-      if (difference <= 0) {
-        daysElement.textContent = "00";
-        hoursElement.textContent = "00";
-        minutesElement.textContent = "00";
-        secondsElement.textContent = "00";
-        return;
-      }
+  const difference =
+    graduationDate - now;
 
-      const days = Math.floor(difference / 86400000);
-      const hours = Math.floor((difference % 86400000) / 3600000);
-      const minutes = Math.floor((difference % 3600000) / 60000);
-      const seconds = Math.floor((difference % 60000) / 1000);
+  const daysElement =
+    document.getElementById("days");
 
-      daysElement.textContent = String(days).padStart(2, "0");
-      hoursElement.textContent = String(hours).padStart(2, "0");
-      minutesElement.textContent = String(minutes).padStart(2, "0");
-      secondsElement.textContent = String(seconds).padStart(2, "0");
-    }
+  const hoursElement =
+    document.getElementById("hours");
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
+  const minutesElement =
+    document.getElementById("minutes");
+
+  const secondsElement =
+    document.getElementById("seconds");
+
+  if (difference <= 0) {
+
+    daysElement.textContent = "00";
+    hoursElement.textContent = "00";
+    minutesElement.textContent = "00";
+    secondsElement.textContent = "00";
+
+    return;
+
+  }
+
+  const days =
+    Math.floor(difference / 86400000);
+
+  const hours =
+    Math.floor(
+      (difference % 86400000) / 3600000
+    );
+
+  const minutes =
+    Math.floor(
+      (difference % 3600000) / 60000
+    );
+
+  const seconds =
+    Math.floor(
+      (difference % 60000) / 1000
+    );
+
+  daysElement.textContent =
+    String(days).padStart(2, "0");
+
+  hoursElement.textContent =
+    String(hours).padStart(2, "0");
+
+  minutesElement.textContent =
+    String(minutes).padStart(2, "0");
+
+  secondsElement.textContent =
+    String(seconds).padStart(2, "0");
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown, 1000);
+
+</script>
 
 </body>
 </html>
